@@ -84,7 +84,7 @@ use libc;
 use std::any::Any;
 use std::borrow::ToOwned;
 use std::cell::Cell;
-use std::fmt::{self, Show};
+use std::fmt::{self, Show, Display};
 use std::mem::replace;
 use std::num::ToPrimitive;
 use std::rc::Rc;
@@ -1361,7 +1361,7 @@ struct LastModified(pub Tm);
 
 impl Header for LastModified {
     #[inline]
-    fn header_name(_: Option<LastModified>) -> &'static str {
+    fn header_name() -> &'static str {
         "Last-Modified"
     }
 
