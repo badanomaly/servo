@@ -296,7 +296,7 @@ fn parse_qualified_name<'i, 't>
                        (context: &ParserContext, input: &mut Parser<'i, 't>,
                         in_attr_selector: bool)
                         -> Result<Option<(NamespaceConstraint, Option<CowString<'i>>)>, ()> {
-    let default_namespace = |:local_name| {
+    let default_namespace = |local_name| {
         let namespace = match context.namespaces.default {
             Some(ref ns) => NamespaceConstraint::Specific(ns.clone()),
             None => NamespaceConstraint::Any,
@@ -304,7 +304,7 @@ fn parse_qualified_name<'i, 't>
         Ok(Some((namespace, local_name)))
     };
 
-    let explicit_namespace = |&: input: &mut Parser<'i, 't>, namespace| {
+    let explicit_namespace = |input: &mut Parser<'i, 't>, namespace| {
         match input.next_including_whitespace() {
             Ok(Token::Delim('*')) if !in_attr_selector => {
                 Ok(Some((namespace, None)))
