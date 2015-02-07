@@ -142,7 +142,7 @@ enum CompositionRequest {
     CompositeNow,
 }
 
-#[derive(Copy, PartialEq, Show)]
+#[derive(Copy, PartialEq, Debug)]
 enum ShutdownState {
     NotShuttingDown,
     ShuttingDown,

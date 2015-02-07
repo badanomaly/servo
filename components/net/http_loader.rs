@@ -29,7 +29,7 @@ use std::borrow::ToOwned;
 
 pub fn factory(cookies_chan: Sender<ControlMsg>)
                -> Box<Invoke<(LoadData, Sender<TargetedLoadResponse>)> + Send> {
-    box move |:(load_data, start_chan)| {
+    box move |(load_data, start_chan)| {
         spawn_named("http_loader".to_owned(), move || load(load_data, start_chan, cookies_chan))
     }
 }

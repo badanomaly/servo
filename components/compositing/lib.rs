@@ -3,12 +3,11 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 #![feature(box_syntax, plugin)]
-#![feature(int_uint)]
+#![feature(int_uint, core, libc, std_misc)]
 
 #![deny(unused_imports)]
 #![deny(unused_variables)]
 #![allow(missing_copy_implementations)]
-#![allow(unstable)]
 
 #[macro_use]
 extern crate log;
