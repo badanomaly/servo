@@ -68,7 +68,7 @@ impl<'a> TreeWalkerMethods for JSRef<'a, TreeWalker> {
         Temporary::new(self.root_node)
     }
 
-    fn WhatToShow(self) -> u32 {
+    fn WhatToDebug(self) -> u32 {
         self.what_to_show
     }
 
@@ -323,7 +323,7 @@ impl<'a> PrivateTreeWalkerHelpers for JSRef<'a, TreeWalker> {
         // "To filter node run these steps:"
         // "1. Let n be node's nodeType attribute value minus 1."
         let n: uint = node.NodeType() as uint - 1;
-        // "2. If the nth bit (where 0 is the least significant bit) of whatToShow is not set,
+        // "2. If the nth bit (where 0 is the least significant bit) of whatToDebug is not set,
         //     return FILTER_SKIP."
         if (self.what_to_show & (1 << n)) == 0 {
             return Ok(NodeFilterConstants::FILTER_SKIP)

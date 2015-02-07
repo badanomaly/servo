@@ -92,7 +92,7 @@ impl ElementDerived for EventTarget {
     }
 }
 
-#[derive(Copy, PartialEq, Show)]
+#[derive(Copy, PartialEq, Debug)]
 #[jstraceable]
 pub enum ElementTypeId {
     HTMLElement(HTMLElementTypeId),

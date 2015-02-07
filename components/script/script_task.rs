@@ -84,7 +84,7 @@ use libc;
 use std::any::Any;
 use std::borrow::ToOwned;
 use std::cell::Cell;
-use std::fmt::{self, Show, Display};
+use std::fmt::{self, Display};
 use std::mem::replace;
 use std::num::ToPrimitive;
 use std::rc::Rc;
@@ -1384,8 +1384,8 @@ impl HeaderFormat for LastModified {
     fn fmt_header(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let LastModified(ref tm) = *self;
         match tm.tm_utcoff {
-            0 => tm.rfc822().fmt(f),
-            _ => tm.to_utc().rfc822().fmt(f)
+            0 => <_ as Display>::fmt(&tm.rfc822(), f),
+            _ => <_ as Display>::fmt(&tm.to_utc().rfc822(), f)
         }
     }
 }

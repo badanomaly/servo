@@ -762,9 +762,9 @@ impl<'a> DocumentMethods for JSRef<'a, Document> {
     }
 
     // http://dom.spec.whatwg.org/#dom-document-createtreewalker
-    fn CreateTreeWalker(self, root: JSRef<Node>, whatToShow: u32, filter: Option<NodeFilter>)
+    fn CreateTreeWalker(self, root: JSRef<Node>, whatToDebug: u32, filter: Option<NodeFilter>)
                         -> Temporary<TreeWalker> {
-        TreeWalker::new(self, root, whatToShow, filter)
+        TreeWalker::new(self, root, whatToDebug, filter)
     }
 
     // http://www.whatwg.org/specs/web-apps/current-work/#document.title

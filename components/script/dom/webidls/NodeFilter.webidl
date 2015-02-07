@@ -14,7 +14,7 @@ callback interface NodeFilter {
   // const unsigned short FILTER_REJECT = 2;
   // const unsigned short FILTER_SKIP = 3;
 
-  // Constants for whatToShow
+  // Constants for whatToDebug
   // const unsigned long SHOW_ALL = 0xFFFFFFFF;
   // const unsigned long SHOW_ELEMENT = 0x1;
   // const unsigned long SHOW_ATTRIBUTE = 0x2; // historical

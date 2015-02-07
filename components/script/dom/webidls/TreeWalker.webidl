@@ -11,7 +11,7 @@ interface TreeWalker {
   [SameObject,Constant]
   readonly attribute Node root;
   [Constant]
-  readonly attribute unsigned long whatToShow;
+  readonly attribute unsigned long whatToDebug;
   [Constant]
   readonly attribute NodeFilter? filter;
   [Pure, SetterThrows]

@@ -261,7 +261,7 @@ impl LayoutDataRef {
 unsafe impl Send for LayoutDataRef {}
 
 /// The different types of nodes.
-#[derive(Copy, PartialEq, Show)]
+#[derive(Copy, PartialEq, Debug)]
 #[jstraceable]
 pub enum NodeTypeId {
     DocumentType,

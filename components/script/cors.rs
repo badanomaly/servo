@@ -10,7 +10,7 @@
 //! with CORSRequest being expanded into FetchRequest (etc)
 
 use std::ascii::AsciiExt;
-use std::fmt::{self, Show, Display};
+use std::fmt::{self, Display};
 use std::str::from_utf8;
 use time;
 use time::{now, Timespec};
@@ -400,7 +400,7 @@ impl Header for AccessControlRequestMethod {
 impl HeaderFormat for AccessControlRequestMethod {
     fn fmt_header(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let AccessControlRequestMethod(ref method) = *self;
-        method.fmt(f)
+        <_ as Display>::fmt(method, f)
     }
 }
 
@@ -498,8 +498,8 @@ impl Header for AccessControlAllowOrigin {
 impl HeaderFormat for AccessControlAllowOrigin {
     fn fmt_header(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match *self {
-            AccessControlAllowOrigin::AllowStar => "*".fmt(f),
-            AccessControlAllowOrigin::AllowOrigin(ref url) => url.fmt(f)
+            AccessControlAllowOrigin::AllowStar => <_ as Display>::fmt("*", f),
+            AccessControlAllowOrigin::AllowOrigin(ref url) => <_ as Display>::fmt(url, f)
         }
     }
 }
@@ -521,7 +521,7 @@ impl Header for AccessControlMaxAge {
 impl HeaderFormat for AccessControlMaxAge {
     fn fmt_header(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let AccessControlMaxAge(ref num) = *self;
-        num.fmt(f)
+        <_ as Display>::fmt(num, f)
     }
 }
 

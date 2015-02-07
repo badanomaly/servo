@@ -19,7 +19,7 @@ interface NodeIterator {
   // [Pure]
   // readonly attribute boolean pointerBeforeReferenceNode;
   // [Constant]
-  // readonly attribute unsigned long whatToShow;
+  // readonly attribute unsigned long whatToDebug;
   // [Constant]
   // readonly attribute NodeFilter? filter;
 
