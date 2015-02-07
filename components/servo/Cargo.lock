@@ -410,7 +410,7 @@ version = "0.0.0"
 source = "git+https://github.com/servo/html5ever#3c00ce803bd76c275cc6937e5fc4d2015d803be3"
 dependencies = [
  "html5ever_macros 0.0.0 (git+https://github.com/servo/html5ever)",
- "phf 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "phf 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "phf_mac 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "string_cache 0.0.0 (git+https://github.com/servo/string-cache)",
  "string_cache_macros 0.0.0 (git+https://github.com/servo/string-cache)",
@@ -630,10 +630,10 @@ dependencies = [
 
 [[package]]
 name = "phf"
-version = "0.6.2"
+version = "0.6.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "phf_shared 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "phf_shared 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -651,7 +651,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "phf_shared"
-version = "0.6.2"
+version = "0.6.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
@@ -756,7 +756,7 @@ version = "0.0.0"
 source = "git+https://github.com/servo/string-cache#b39816bf9b677077dc2c6849ee7190fcdff7e913"
 dependencies = [
  "lazy_static 0.1.7 (git+https://github.com/Kimundi/lazy-static.rs)",
- "phf 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "phf 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "phf_mac 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "string_cache_macros 0.0.0 (git+https://github.com/servo/string-cache)",
  "xxhash 0.0.8 (registry+https://github.com/rust-lang/crates.io-index)",
