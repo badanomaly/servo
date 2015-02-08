@@ -84,7 +84,7 @@ fn make_test(file: String) -> TestDescAndFn {
             ignore: false,
             should_fail: ShouldFail::No,
         },
-        testfn: DynTestFn(Thunk::new(move |:| { run_test(file) }))
+        testfn: DynTestFn(Thunk::new(move || { run_test(file) }))
     }
 }
 
