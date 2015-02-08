@@ -275,7 +275,7 @@ dependencies = [
 [[package]]
 name = "gl_common"
 version = "0.0.4"
-source = "git+https://github.com/bjz/gl-rs#c522b31d21f3887c7e864276d61713e1eb20c848"
+source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "libc 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -283,9 +283,9 @@ dependencies = [
 [[package]]
 name = "gl_generator"
 version = "0.0.16"
-source = "git+https://github.com/bjz/gl-rs#c522b31d21f3887c7e864276d61713e1eb20c848"
+source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "khronos_api 0.0.5 (git+https://github.com/bjz/gl-rs)",
+ "khronos_api 0.0.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "xml-rs 0.1.17 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -293,21 +293,21 @@ dependencies = [
 [[package]]
 name = "gleam"
 version = "0.0.1"
-source = "git+https://github.com/servo/gleam#cb4fc448bde3c09f28c83517c02a8daa6d43d5dd"
+source = "git+https://github.com/servo/gleam#8db846ebf8a9a0a7588cc451c79ae1259f6b70d6"
 dependencies = [
- "gl_common 0.0.4 (git+https://github.com/bjz/gl-rs)",
- "gl_generator 0.0.16 (git+https://github.com/bjz/gl-rs)",
- "khronos_api 0.0.5 (git+https://github.com/bjz/gl-rs)",
+ "gl_common 0.0.4 (registry+https://github.com/rust-lang/crates.io-index)",
+ "gl_generator 0.0.16 (registry+https://github.com/rust-lang/crates.io-index)",
+ "khronos_api 0.0.5 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "glx"
 version = "0.0.1"
-source = "git+https://github.com/servo/rust-glx#e0444395cdd8353c658ea9d377c085050c672b64"
+source = "git+https://github.com/servo/rust-glx#72587171e778c52ccba327466eaedb6e816da507"
 dependencies = [
- "gl_common 0.0.4 (git+https://github.com/bjz/gl-rs)",
- "gl_generator 0.0.16 (git+https://github.com/bjz/gl-rs)",
- "khronos_api 0.0.5 (git+https://github.com/bjz/gl-rs)",
+ "gl_common 0.0.4 (registry+https://github.com/rust-lang/crates.io-index)",
+ "gl_generator 0.0.16 (registry+https://github.com/rust-lang/crates.io-index)",
+ "khronos_api 0.0.5 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -318,11 +318,12 @@ source = "git+https://github.com/servo/rust-harfbuzz#c7866672732b4b5d3a8ea9e7f35
 [[package]]
 name = "html5ever"
 version = "0.0.0"
-source = "git+https://github.com/servo/html5ever#3c00ce803bd76c275cc6937e5fc4d2015d803be3"
+source = "git+https://github.com/servo/html5ever#1c8c09934657fa8edb8ac94070a9061bc040621d"
 dependencies = [
  "html5ever_macros 0.0.0 (git+https://github.com/servo/html5ever)",
+ "log 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "phf 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
- "phf_mac 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "phf_macros 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "string_cache 0.0.0 (git+https://github.com/servo/string-cache)",
  "string_cache_macros 0.0.0 (git+https://github.com/servo/string-cache)",
  "time 0.1.16 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -331,7 +332,7 @@ dependencies = [
 [[package]]
 name = "html5ever_macros"
 version = "0.0.0"
-source = "git+https://github.com/servo/html5ever#3c00ce803bd76c275cc6937e5fc4d2015d803be3"
+source = "git+https://github.com/servo/html5ever#1c8c09934657fa8edb8ac94070a9061bc040621d"
 
 [[package]]
 name = "hyper"
@@ -372,7 +373,7 @@ dependencies = [
 [[package]]
 name = "khronos_api"
 version = "0.0.5"
-source = "git+https://github.com/bjz/gl-rs#c522b31d21f3887c7e864276d61713e1eb20c848"
+source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "layers"
@@ -535,17 +536,13 @@ dependencies = [
 ]
 
 [[package]]
-name = "phf_mac"
-version = "0.5.0"
+name = "phf_macros"
+version = "0.6.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "phf_shared 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "phf_shared 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rand 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
-
-[[package]]
-name = "phf_shared"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "phf_shared"
@@ -669,11 +666,11 @@ source = "git+https://github.com/servo/rust-stb-image#8fb5031333ea142802724719ce
 [[package]]
 name = "string_cache"
 version = "0.0.0"
-source = "git+https://github.com/servo/string-cache#b39816bf9b677077dc2c6849ee7190fcdff7e913"
+source = "git+https://github.com/servo/string-cache#12b84faff894d358a546bf064b0daf5f04f2a96b"
 dependencies = [
  "lazy_static 0.1.7 (git+https://github.com/Kimundi/lazy-static.rs)",
  "phf 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
- "phf_mac 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "phf_macros 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "string_cache_macros 0.0.0 (git+https://github.com/servo/string-cache)",
  "xxhash 0.0.8 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -681,7 +678,7 @@ dependencies = [
 [[package]]
 name = "string_cache_macros"
 version = "0.0.0"
-source = "git+https://github.com/servo/string-cache#b39816bf9b677077dc2c6849ee7190fcdff7e913"
+source = "git+https://github.com/servo/string-cache#12b84faff894d358a546bf064b0daf5f04f2a96b"
 dependencies = [
  "lazy_static 0.1.7 (git+https://github.com/Kimundi/lazy-static.rs)",
 ]
